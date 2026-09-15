@@ -1,0 +1,483 @@
+/* Configurações Gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f5f5f5;
+}
+
+header {
+    background: white;
+    padding: 20px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo h1 {
+    color: #1d3557;
+    font-size: 25px;
+}
+
+.logo p {
+    color: #777;
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #1d3557;
+}
+
+
+/* Topo e detalhes iniciais */
+
+.inicio {
+    min-height: 600px;
+    padding: 70px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background: #edf1f5;
+}
+
+.apresentacao {
+    width: 45%;
+}
+
+.apresentacao span {
+    background: #1d3557;
+    color: white;
+
+    padding: 7px 12px;
+
+    font-size: 12px;
+}
+
+.apresentacao h2 {
+    color: #1d3557;
+
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+.apresentacao > p {
+    color: #666;
+    font-size: 16px;
+}
+
+.preco-antigo {
+    margin-top: 25px;
+
+    text-decoration: line-through;
+    color: #888 !important;
+}
+
+.apresentacao h3 {
+    color: #1d3557;
+    font-size: 38px;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 22px;
+
+    background: #1d3557;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+}
+
+
+/* Seção sobre o carrosel */
+
+.carrossel {
+    width: 52%;
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ddd;
+
+    border-radius: 7px;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.foto.ativa {
+    opacity: 1;
+}
+
+.carrossel button {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+#voltar {
+    left: 15px;
+}
+
+#avancar {
+    right: 15px;
+}
+
+.contador {
+    position: absolute;
+
+    bottom: 12px;
+    right: 15px;
+
+    padding: 4px 10px;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    color: white;
+
+    font-size: 13px;
+
+    border-radius: 3px;
+}
+
+
+/* Detalhes */
+
+.imovel,
+.detalhes,
+.ambientes,
+.localizacao {
+    padding: 80px 7%;
+}
+
+.imovel,
+.ambientes {
+    background: white;
+}
+
+.imovel h2,
+.detalhes h2,
+.ambientes h2,
+.localizacao h2 {
+    text-align: center;
+
+    color: #1d3557;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+.imovel > p,
+.localizacao > p {
+    max-width: 800px;
+
+    margin: 0 auto 15px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+/* Informações (Sobre) */
+
+.informacoes {
+    max-width: 950px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.informacoes div {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #f7f7f7;
+
+    border: 1px solid #ddd;
+}
+
+.informacoes b {
+    color: #1d3557;
+    font-size: 24px;
+}
+
+.informacoes p {
+    color: #777;
+}
+
+
+/* Cards */
+
+.cards {
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.cards div {
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid #ddd;
+}
+
+.cards h3 {
+    color: #1d3557;
+
+    margin-bottom: 10px;
+}
+
+.cards p {
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* Seção ambientes */
+
+.lista {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.lista div {
+    padding: 22px;
+
+    background: #f5f5f5;
+
+    border-left: 4px solid #1d3557;
+}
+
+.lista h3 {
+    color: #1d3557;
+    margin-bottom: 7px;
+}
+
+.lista p {
+    color: #666;
+}
+
+
+/* Seção Localização */
+
+.localizacao {
+    background: #f5f5f5;
+}
+
+
+/* Contato */
+
+.contato {
+    padding: 70px 7%;
+
+    text-align: center;
+
+    background: #1d3557;
+
+    color: white;
+}
+
+.contato h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.contato p {
+    color: #ddd;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+.contato button {
+    margin-top: 20px;
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: white;
+
+    color: #1d3557;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Rodapé */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #14253d;
+
+    color: white;
+}
+
+footer p {
+    color: #ccc;
+
+    margin: 5px 0 10px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio {
+        flex-direction: column;
+    }
+
+    .apresentacao {
+        width: 100%;
+    }
+
+    .carrossel {
+        width: 100%;
+        height: 350px;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .inicio {
+        padding: 50px 20px;
+    }
+
+    .apresentacao h2 {
+        font-size: 35px;
+    }
+
+    .carrossel {
+        height: 280px;
+    }
+
+    .informacoes,
+    .cards,
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    .imovel,
+    .detalhes,
+    .ambientes,
+    .localizacao {
+        padding: 60px 20px;
+    }
+
+}
